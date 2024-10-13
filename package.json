@@ -6,7 +6,8 @@
   "scripts": {
     "start": "tsc && node dist/server.js",
     "dev": "nodemon src/server.ts",
-    "build": "tsc"  },
+    "build": "tsc"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +24,9 @@
     "validator": "^13.12.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
     "nodemon": "^3.1.7"
   }
 }
