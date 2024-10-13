@@ -1,9 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes";
-import classRoutes from "./routes/classRoutes";
-import studentRoutes from "./routes/studentRoutes";
-import teacherRoutes from "./routes/teacherRoutes";
+// import classRoutes from "./routes/classRoutes";
+// import studentRoutes from "./routes/studentRoutes";
+// import teacherRoutes from "./routes/teacherRoutes";
 import swaggerJsdoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
@@ -32,10 +32,10 @@ const swaggerOptions = {
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.use("/auth", authRoutes);
-app.use("/users", classRoutes);
-app.use("/users", studentRoutes);
-app.use("/users", teacherRoutes);
+    app.use("/auth", authRoutes);
+    // app.use("/classes", classRoutes);
+    // app.use("/students", studentRoutes);
+    // app.use("/teachers", teacherRoutes);
 
 const PORT = process.env.PORT || 3000;
 
